@@ -23,6 +23,10 @@ button{
 p{
   padding: 0;
 }
+a{
+    text-decoration: none;
+    color: inherit;
+}
 
 body{
     min-width: 320px;
@@ -31,6 +35,7 @@ body{
     font-weight: 400;
     font-size: 16px;
     line-height: 18px;
+    color: $default-color;
 }
 
 .container{
@@ -56,5 +61,24 @@ body{
 @media (min-width: 1440px){
   .container{
     max-width: 1320px;
+  }
+}
+
+.title{
+  @extend %robotocondensed-400;
+  font-size: 24px;
+  line-height: 28px;
+  position: relative;
+  padding-bottom: 28px;
+  &::after{
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 8px;
+    background-color: $accent;
+    bottom: 0;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
   }
 }
